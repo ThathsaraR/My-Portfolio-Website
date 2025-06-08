@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UtF=8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+        <title>Thathsara Rosa</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body> 
+        <div class="menuINscroll" onclick="showSlidebar()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </div>
+        <div class="slidebar">
+            <ul>
+                <li onclick="hideSlidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#EA3323"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About me</a></li>
+                <li><a href="#Hireme">Hire me</a></li>
+                <li><a href="#Hireme">Contact</a></li>
+            </ul> 
+        </div>      
+        <section id="Home">
+            <header>
+                <img src="images/logo.0.png" alt="logo" height="80px" width="60px">   
+                <ul class="HideInMobile">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About me</a></li>
+                    <li><a href="#Hireme">Hire me</a></li>
+                    <li><a href="#Hireme">Contact</a></li>
+                </ul>       
+            </header>
+
+            <script>
+                function showSlidebar(){
+                    const slidebar = document.querySelector('.slidebar')
+                    slidebar.style.display= "flex"
+                }
+                function hideSlidebar(){   
+                    const slidebar = document.querySelector('.slidebar')
+                    slidebar.style.display= "none"
+                }
+
+                // Show menuINscroll when scrolling down
+                let lastScrollTop = 0;
+
+                window.addEventListener('scroll', () => {
+                    const menuINscroll = document.querySelector('.menuINscroll');
+                    const currentScroll = window.scrollY;
+
+                    if (currentScroll > 100 && currentScroll > lastScrollTop) {
+                        // Show menuINscroll
+                        menuINscroll.classList.add('show');
+                    } else {
+                        // Hide menuINscroll
+                        menuINscroll.classList.remove('show');
+                    }
+                    lastScrollTop = currentScroll;
+                });
+
+            </script>
+
+            <div class="hom-set">
+                <div class="detel">
+                    <h1><span>Who am I ?</span></h1>
+                    <p class="showmobile">I am Vihanga Thathsara</p>
+                    <p class="box1">
+                        I am <b>Vihanga Thathsarana Rosa</b> ,born on October 10,2003 ,resides in Vibrant town of little island Sri Lanka called Seeduwa.At the age of 18, I aspires to become a software enginner, delving into the intricate world of coding and technology. My journey unfolds with determination and a passion for shaping the digital landscape.</p>
+                    <a href="My CV.pdf" target="_blank">DOWNOAD CV</a>
+                </div>
+                <div class="images">
+                    <img src="images/Shape.png" class="shape">
+                    <img src="images/photo.1.png" class="boy">
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="About">
+            <div class="ab-container">
+                <div class="ab-set">
+                    <h1 class="ab-head">About Me</h1>
+                </div>
+                <div class="ab-con">
+                    
+                    <p>I am a man passionate about technology and enjoy building applications that solve real-world problems. 
+                        I am currently building my career path in HNDIT Dehiwala and have a keen interest in the IT industry. I strive to continuously improve my skills and stay updated with industry trends.</p>
+                </div>
+                <h3 class="ab-subhead">My Skills</h3>
+                <div class="skills-container">
+                    <div class="skill-box" data-skill="HTML & CSS">
+                        <h5>HTML & CSS</h5>
+                        <svg fill="none" height="2500" width="2183" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 141.53199999999998"><path d="M10.383 126.894L0 0l124 .255-10.979 126.639-50.553 14.638z" fill="#e34f26"/><path d="M62.468 129.277V12.085l51.064.17-9.106 104.851z" fill="#ef652a"/><path d="M99.49 41.362l1.446-15.49H22.383l4.34 47.49h54.213L78.81 93.617l-17.362 4.68-17.617-5.106-.936-12.085H27.319l2.128 24.681 32 8.936 32.255-8.936 4.34-48.17H41.107L39.49 41.362z" fill="#fff"/></svg>                         
+                        <div class="skill-overlay">
+                            <button class="see-more-btn">See More</button>
+                        </div>
+                    </div>
+                    <div class="skill-box" data-skill="JavaScript">
+                        <h5>Javascript</h5>
+                        <svg fill="none" height="2500" width="2183" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 141.53199999999998"><path d="M10.383 126.894L0 0l124 .255-10.979 126.639-50.553 14.638z" fill="#e9ca32"/><path d="M62.468 129.277V12.085l51.064.17-9.106 104.851z" fill="#ffde25"/><g fill="#fff"><path d="M57 26H43.5v78L33 102V91.5l-12.5-2V113l36.5 9.5zM67.127 26H104.5L102 40.95H81.394v24.533H102L99.5 115l-32.373 7.5V107L89 99.5 90.263 79l-23.136 3.35z"/></g></svg>                         
+                        <div class="skill-overlay">
+                            <button class="see-more-btn">See More</button>
+                        </div>
+                    </div>
+                    <div class="skill-box" data-skill="C#">
+                        <h5>C#</h5>
+                        <svg height="2500" preserveAspectRatio="xMidYMid" viewBox="0 -1.428 255.582 290.108" width="2222" xmlns="http://www.w3.org/2000/svg"><path d="m255.569 84.452c-.002-4.83-1.035-9.098-3.124-12.76-2.052-3.603-5.125-6.622-9.247-9.009-34.025-19.619-68.083-39.178-102.097-58.817-9.17-5.294-18.061-5.1-27.163.27-13.543 7.986-81.348 46.833-101.553 58.536-8.321 4.818-12.37 12.19-12.372 21.771-.013 39.455 0 78.91-.013 118.365 0 4.724.991 8.91 2.988 12.517 2.053 3.711 5.169 6.813 9.386 9.254 20.206 11.703 88.02 50.547 101.56 58.536 9.106 5.373 17.997 5.565 27.17.27 34.015-19.64 68.075-39.199 102.105-58.818 4.217-2.44 7.333-5.544 9.386-9.252 1.994-3.608 2.987-7.793 2.987-12.518 0 0 0-78.889-.013-118.345" fill="#a179dc"/><path d="m128.182 143.241-125.194 72.084c2.053 3.711 5.169 6.813 9.386 9.254 20.206 11.703 88.02 50.547 101.56 58.536 9.106 5.373 17.997 5.565 27.17.27 34.015-19.64 68.075-39.199 102.105-58.818 4.217-2.44 7.333-5.544 9.386-9.252z" fill="#280068"/><path d="m255.569 84.452c-.002-4.83-1.035-9.098-3.124-12.76l-124.263 71.55 124.413 72.073c1.994-3.608 2.985-7.793 2.987-12.518 0 0 0-78.889-.013-118.345" fill="#390091"/><g fill="#fff"><path d="m201.892 116.294v13.474h13.474v-13.474h6.737v13.474h13.474v6.737h-13.474v13.473h13.474v6.737h-13.474v13.474h-6.737v-13.474h-13.474v13.474h-6.737v-13.474h-13.473v-6.737h13.473v-13.473h-13.473v-6.737h13.473v-13.474zm13.474 20.21h-13.474v13.474h13.474z"/><path d="m128.457 48.626c35.144 0 65.827 19.086 82.262 47.456l-.16-.273-41.35 23.808c-8.146-13.793-23.08-23.102-40.213-23.294l-.54-.003c-26.125 0-47.305 21.18-47.305 47.305a47.08 47.08 0 0 0 6.239 23.47c8.154 14.235 23.483 23.836 41.067 23.836 17.693 0 33.109-9.723 41.221-24.11l-.197.345 41.287 23.918c-16.255 28.13-46.518 47.157-81.253 47.536l-1.058.006c-35.255 0-66.025-19.204-82.419-47.724-8.003-13.923-12.582-30.064-12.582-47.277 0-52.466 42.532-95 95-95z"/></g></svg>                         
+                        <div class="skill-overlay">
+                            <button class="see-more-btn">See More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ab-text">
+                    <p>To stay updated with my projects and professional journey, feel free to check out:</p>
+                    <div class="projects">
+                        <div class="pbox">
+                            <h3>Project 1</h3>
+                        </div>
+                        <div class="pbox">
+                            <h3>Project 2</h3>
+                        </div>
+                        <div class="pbox">
+                            <h3>Project 3</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+
+
+<section id="Hireme">
+    <div class="cont-container">
+        <div class="ab-subcont">
+            <div class="form-box">
+                <form action="https://formsubmit.co/vihangarosa@gmail.com " method="post"> 
+                    <table>
+                        <tr>
+                            <td><label for="Email">Email Address</label></td>
+                            <td><input type="email" name="Email" id="Email" required placeholder="Enter your email"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="Message">Message</label></td>
+                            <td><textarea name="Message" id="Message" required placeholder="Write your message or feedback here"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button type="submit" class="submit-btn">Send Message</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="pre-cont">
+                <p>Are you captivated by my work and interested in collaborating? I’m ready to bring my skills and dedication to your team!</p>
+                <div class="contact-info">
+                    <h5>Contact: (+94) 720729445</h5>
+                    <h5>Email: <a href="mailto:vihangarosa@gmail.com">vihangarosa@gmail.com</a></h5>
+                </div>
+                <p>Let’s connect and explore opportunities to create something remarkable together.</p>
+                <p>To stay updated with my projects and professional journey, feel free to check out:</p>
+                <div class="links">
+                    <h5><a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 999.937 999.937"><path d="M0 499.968c0-138.012 48.825-255.843 146.476-353.493C244.125 48.825 361.956 0 499.969 0 637.98 0 755.811 48.825 853.462 146.475c97.649 97.65 146.475 215.481 146.475 353.493s-48.825 255.843-146.475 353.493c-97.65 97.65-215.481 146.476-353.493 146.476-138.013 0-255.844-48.825-353.493-146.476C48.825 755.812 0 637.979 0 499.968zm54.684 0c0 122.389 43.617 227.199 130.851 314.434 87.234 87.233 192.045 130.851 314.434 130.851 122.388 0 227.199-43.617 314.433-130.851 87.234-87.234 130.851-192.045 130.851-314.434 0-122.388-43.616-227.199-130.851-314.433C727.168 98.301 622.356 54.684 499.969 54.684c-122.389 0-227.199 43.617-314.434 130.851C98.301 272.769 54.684 377.58 54.684 499.968zm140.617 107.415c-2.604-2.604-2.604-5.208 0-7.812 5.207-5.208 11.718-7.161 19.529-5.859 7.812 1.302 12.369 2.604 13.671 3.906 9.114 3.906 19.205 12.694 30.271 26.366 11.066 13.671 19.855 23.11 26.366 28.318 31.248 26.04 63.146 27.993 95.696 5.859 2.604-9.114 6.836-16.926 12.694-23.437 5.858-6.51 11.393-11.066 16.601-13.671 5.209-2.604 14.323-6.51 27.343-11.718-42.967-3.906-77.795-11.393-104.486-22.46s-47.849-25.063-63.473-41.989c-20.832-23.436-33.527-54.033-38.084-91.791-4.558-37.758-1.628-72.261 8.789-103.509 7.812-19.53 18.879-37.106 33.2-52.731-10.416-32.55-8.463-69.657 5.859-111.321 41.664 2.604 79.422 16.926 113.274 42.966 65.1-16.926 132.804-17.577 203.111-1.953 9.114-6.51 23.111-14.647 41.989-24.413 18.879-9.765 42.641-15.299 71.285-16.601 5.208 14.322 8.789 31.248 10.742 50.778s.977 37.758-2.929 54.684c29.945 31.248 45.569 72.912 46.871 124.992 0 41.664-7.16 76.167-21.482 103.509s-39.711 50.127-76.167 68.354c-24.738 11.719-57.288 18.879-97.65 21.483 18.229 9.114 31.574 18.554 40.037 28.319 8.464 9.765 13.997 25.063 16.602 45.895v61.521l1.952 59.566c3.906 6.511 8.464 12.044 13.672 16.602 5.208 4.557 9.765 7.812 13.671 9.765 3.905 1.953 5.208 4.883 3.905 8.789-1.302 3.906-6.51 5.859-15.623 5.859-22.135 0-39.711-7.812-52.731-23.437-3.906-6.51-5.859-14.321-5.859-23.436v-93.744c0-10.416-2.604-17.903-7.812-22.46-5.208-4.558-10.416-7.487-15.624-8.789v123.039c0 22.134 2.604 36.456 7.812 42.966s8.463 13.021 9.766 19.53c1.302 1.302.325 2.278-2.93 2.929-3.254.65-8.788-.325-16.601-2.929-16.926-3.906-28.644-12.695-35.154-26.366-6.51-13.671-9.765-28.319-9.765-43.943V667.926H488.25v121.086c0 15.624-3.256 30.598-9.766 44.919-9.113 18.229-26.04 27.993-50.777 29.295-3.906-1.302-5.859-2.604-5.859-3.905 1.302-1.303 5.208-7.812 11.718-19.53 1.302-2.604 2.93-7.812 4.883-15.624 1.954-7.812 2.93-16.926 2.93-27.342v-123.04c-5.208 1.302-10.091 4.231-14.648 8.789s-6.836 12.044-6.836 22.46v93.744c0 9.113-1.953 16.926-5.859 23.436-11.718 15.624-29.295 23.437-52.73 23.437-9.114 0-14.322-1.953-15.624-5.859-1.303-2.604-.977-4.883.977-6.836s4.883-4.232 8.789-6.836c3.906-2.604 6.51-4.558 7.812-5.859 5.208-3.906 9.113-9.114 11.718-15.624 3.906-5.208 4.882-18.879 2.929-41.013s-2.279-36.456-.977-42.966c-33.853 11.718-68.355 5.858-103.51-17.577-10.416-10.416-20.832-25.39-31.248-44.919-7.812-14.323-23.436-31.249-46.871-50.779z"/></svg>
+                    </a></h5>
+                    <h5><a href="#">
+                        <svg viewBox="0 0 148.4 36" xmlns="http://www.w3.org/2000/svg" width="150" height="20"><path d="M146.3 29.1c.4-.1.6-.3.6-.7 0-.5-.3-.7-.9-.7h-1v2.5h.4v-1.1h.4l.7 1.1h.4zm-.4-.3h-.4V28h.5c.3 0 .6 0 .6.4s-.3.4-.7.4z"/><path d="M146 26.6c-1.3 0-2.4 1-2.4 2.4 0 1.3 1 2.4 2.4 2.4 1.3 0 2.4-1 2.4-2.4-.1-1.4-1.1-2.4-2.4-2.4zm0 4.4c-1.1 0-2-.9-2-2.1s.9-2.1 2-2.1 2 .9 2 2.1-.9 2.1-2 2.1zM0 5.3h5.6v20.3h10.2v5.1H0zM18.3 13.5h5.3v17.2h-5.3zM21 4.9c1.7 0 3.1 1.4 3.1 3.1s-1.4 3.1-3.1 3.1-3.1-1.4-3.1-3.1 1.3-3.1 3.1-3.1M45.9 5.3h5.4v15.2l6-7h6.6l-7 7.9 6.8 9.3H57l-5.7-8.5v8.5h-5.4zM26.6 13.5h5.1v2.3h.1c.7-1.4 2.5-2.8 5.1-2.8 5.4 0 6.4 3.6 6.4 8.2v9.4H38v-8.4c0-2 0-4.6-2.8-4.6S32 19.8 32 22v8.5h-5.3v-17z"/><path d="M75.1 20.1c0-1.8-1.4-3.3-3.3-3.3-2.3 0-3.6 1.6-3.8 3.3zm4.5 7.6c-1.7 2.2-4.5 3.4-7.3 3.4-5.3 0-9.6-3.6-9.6-9.1s4.3-9.1 9.6-9.1c5 0 8.1 3.6 8.1 9.1v1.7H68c.4 2 2 3.3 4 3.3 1.7 0 2.9-.9 3.8-2.1zM91.5 17.6c-2.7 0-4.3 1.8-4.3 4.4s1.6 4.4 4.3 4.4 4.3-1.8 4.3-4.4-1.6-4.4-4.3-4.4m9.2 13.1h-4.9v-2.3h-.1c-.8 1.2-2.9 2.7-5.3 2.7-5.1 0-8.5-3.7-8.5-8.9 0-4.8 3-9.2 7.9-9.2 2.2 0 4.3.6 5.5 2.3h.1v-10h5.3z"/><path d="M139.4 0h-30.7c-1.5 0-2.7 1.2-2.7 2.6v30.8c0 1.4 1.2 2.6 2.7 2.6h30.7c1.5 0 2.7-1.2 2.7-2.6V2.6c0-1.4-1.2-2.6-2.7-2.6z" fill="#006192"/><g fill="#fff"><path d="M111.4 13.5h5.3v17.2h-5.3zm2.7-8.5c1.7 0 3.1 1.4 3.1 3.1s-1.4 3.1-3.1 3.1-3.1-1.4-3.1-3.1c0-1.8 1.4-3.1 3.1-3.1M120.1 13.5h5.1v2.3h.1c.7-1.4 2.5-2.8 5.1-2.8 5.4 0 6.4 3.6 6.4 8.2v9.4h-5.3v-8.4c0-2 0-4.6-2.8-4.6s-3.2 2.2-3.2 4.4v8.5h-5.3v-17z"/></g></svg>
+                    </a></h5>
+                </div>
+                <p>Let’s turn ideas into impactful solutions. I look forward to hearing from you!</p>
+            </div>
+        </div>           
+        <div class="social-icons">
+            <ul>
+                <li><a href="#" class="fa fa-facebook" aria-label="Facebook"></a></li>
+                <li><a href="#" class="fa fa-twitter" aria-label="Twitter"></a></li>
+                <li><a href="#" class="fa fa-instagram" aria-label="Instagram"></a></li>
+            </ul>
+        </div>
+    </div>    
+    <footer>
+        <p class="coright">&copy; 2024 Vihanga Rosa. All rights reserved.</p>
+    </footer>
+</section>
+
+        
+    </body>
+</html>
